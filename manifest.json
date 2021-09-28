@@ -6,5 +6,5 @@
   "domain": "sms77_voice",
   "issue_tracker": "https://github.com/sms77io/home-assistant-voice/issues",
   "name": "Sms77 Voice",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

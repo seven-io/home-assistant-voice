@@ -4,6 +4,11 @@
 
 ## Installation
 
+Clone the repository to a folder called "custom_components" in your Home
+Assistant root directory, e.g. `git clone https://github.com/sms77io/home-assistant-voice ~/.homeassistant/custom_components/sms77_voice`
+
+## Configuration
+
 Add to `configuration.yaml` usually in `~/.homeassistant/`:
 
 ```yaml
@@ -17,12 +22,11 @@ notify:
     recipient: +4943160049853
 ```
 
-### Example
+Check out the [example](./screenshots/automation_action_call_service.png) on how to
+configure a service call on automation.
 
-[Configure service call on automation](./screenshots/automation_action_call_service.png)
-
-#### Support
+## Support
 
 Need help? Feel free to [contact us](https://www.sms77.io/en/company/contact/).
 
-[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](./LICENSE)
+[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)
