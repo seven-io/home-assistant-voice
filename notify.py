@@ -1,16 +1,12 @@
 """Sms77 Voice for notify component."""
+from http import HTTPStatus
 import logging
 
 import requests
 import voluptuous
 
 from homeassistant.components.notify import PLATFORM_SCHEMA, BaseNotificationService
-from homeassistant.const import (
-    CONF_API_KEY,
-    CONF_RECIPIENT,
-    CONF_SENDER,
-    HTTP_OK,
-)
+from homeassistant.const import CONF_API_KEY, CONF_RECIPIENT, CONF_SENDER
 import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)
@@ -58,8 +54,8 @@ class Sms77VoiceNotificationService(BaseNotificationService):
             timeout=TIMEOUT,
         )
 
-        if res.status_code != HTTP_OK:
-            _LOGGER.error("Expected %s but got %s", HTTP_OK, res.status_code)
+        if res.status_code != HTTPStatus.OK:
+            _LOGGER.error("Expected %d but got %s", HTTPStatus.OK, res.status_code)
             return
 
         code = int(res.text.splitlines()[0])
@@ -76,7 +72,7 @@ def _authenticate(config):
         timeout=TIMEOUT,
     )
 
-    return res.status_code == HTTP_OK and "." in res.text
+    return res.status_code == HTTPStatus.OK and "." in res.text
 
 
 def _build_headers(api_key, sent_with="home-assistant"):
