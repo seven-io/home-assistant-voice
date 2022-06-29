@@ -1,5 +1,6 @@
 {
   "content_in_root": true,
+  "homeassistant": "0.70.0",
   "name": "sms77 Voice",
   "render_readme": true
 }
