@@ -1,6 +1,8 @@
 ![sms77.io Logo](https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png "sms77.io Logo")
 
-# Official Home Assistant Voice Component
+# Deprecated - please use [https://github.com/seven-io/home-assistant](https://github.com/seven-io/home-assistant).
+
+## Official Home Assistant Voice Component
 
 This integration adds the possibility of making text-to-speech calls via [sms77](https://www.sms77.io).
 
